@@ -6,7 +6,9 @@
 @color-accent-dark: #c36121; /* orange -dark */
 @color-link: #0064a4;
 
-@color-gray-0: #f3f3f3;
+/* gray scale */
+/*@color-gray-0: #f3f3f3;*/
+@color-gray-0: #EFEFEE;
 @color-gray-1: #e6e6e6;
 @color-gray-2: #ccc;
 @color-gray-3: #b3b3b3;
@@ -17,13 +19,17 @@
 @color-gray-8: #333;
 @color-gray-9: #000;
 
+/* grays - common */
 @color-gray: @color-gray-2;			/* #ccc */
 @color-gray-light: @color-gray-0;	/* #f3f3f3 */
+@color-gray-lightest: #fbfbfb;
 @color-gray-med: @color-gray-4;		/* #999 */
 @color-gray-dark: @color-gray-6;	/* #666 */
 @color-gray-darkest: @color-gray-8;	/* #333 */
 
 @color-gray-border: @color-gray-3; /* #b3b3b3 */
+@color-gray-border-light: @color-gray-2; /* #ccc */
+@color-gray-border-lightest: @color-gray-1; /* #e6e6e6 */
 
 /* transparent - for mockup only */
 @color-gray-trans1: fade(@color-gray, 30%);
@@ -74,8 +80,9 @@
 @size-small: .875rem; /* 14px */
 @size-large: 1.25rem; /* 20px */
 
-@grid-gutter: 		@unit-3;
-@grid-gutter-wide: 	@unit-6;
+@grid-gutter: 			@unit-3;
+@grid-gutter-narrow: 	@unit-2;
+@grid-gutter-wide: 		@unit-6;
 
 /* BREAKPOINTS */
 @breakpoint-medium: 1024px;
@@ -206,7 +213,7 @@ ul li li { list-style: circle; }
 
 blockquote { margin-right: @unit-4; padding: @unit-1; font-style: italic; }
 blockquote p { border-left: @unit-1half solid @color-gray; padding-left: @unit-2; }
-blockquote :last-child { padding-bottom: 0; }
+/*blockquote :last-child { padding-bottom: 0; }*/
 
 /* Table Styling */
 
@@ -461,6 +468,10 @@ dd {}
 
 /* =========================================  FORMS  ========================================= */
 
+.module.module-fieldset {
+	padding: @unit-2;
+	padding-bottom: 0;
+}
 .form-group { /*padding-bottom: @unit-2;*/ }
 /*[class*='col-'] .form-group { padding-bottom: 0; }*/
 label { font-weight: bold; }
@@ -492,7 +503,7 @@ label.form-check {
 }
 /* gradient */
 @selectStartColor: white;
-@selectEndColor: @color-gray-light;
+@selectEndColor: @color-gray-1;
 
 select {
 	background-color: @selectStartColor;
@@ -711,21 +722,27 @@ input[type="submit"]:focus {
 /* for wider gutters */
 .grid.grid-wide-gutter { margin-right: -@grid-gutter-wide; }
 .grid.grid-wide-gutter [class*='col-'] { padding: 0 @grid-gutter-wide @grid-gutter-wide 0; }
+
+/* for narrower gutters */
+.grid.grid-narrow-gutter { margin-right: -@grid-gutter-narrow; }
+.grid.grid-narrow-gutter [class*='col-'] { padding: 0 @grid-gutter-narrow @grid-gutter-narrow 0; }
+
 /* no gutter */
 .grid.grid-no-gutter { margin: 0; }
 .grid.grid-no-gutter [class*='col-'] { padding: 0; }
+
 
 /* boxed content (box inside a column) */
 .module {
 	padding: @unit-3;
 	/*background: #eee;*/
-	background: #f3f3f3;
-	border: 1px solid @color-gray-border;
+	background: @color-gray-lightest;
+	border: 1px solid @color-gray-border-lightest;
 }
 /* when using a module as the wrapper for the grid */
-.module [class*="col-"]:last-child {
+/*.module [class*="col-"]:last-child {
     padding-bottom: 0;
-}
+}*/
 
 
 /* medium screen (desktop - 1024px or smaller) */
