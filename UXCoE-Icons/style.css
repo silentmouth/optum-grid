@@ -1,1 +1,429 @@
+@font-face {
+  font-family: 'UXCoE-Icons';
+  src:  url('fonts/UXCoE-Icons.eot?9b0d9o');
+  src:  url('fonts/UXCoE-Icons.eot?9b0d9o#iefix') format('embedded-opentype'),
+    url('fonts/UXCoE-Icons.ttf?9b0d9o') format('truetype'),
+    url('fonts/UXCoE-Icons.woff?9b0d9o') format('woff'),
+    url('fonts/UXCoE-Icons.svg?9b0d9o#UXCoE-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="cux-icon-"], [class*=" cux-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'UXCoE-Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cux-icon-person:before {
+  content: "\e601";
+}
+.cux-icon-home:before {
+  content: "\e602";
+}
+.cux-icon-dashboard:before {
+  content: "\e603";
+}
+.cux-icon-save:before {
+  content: "\e604";
+}
+.cux-icon-open:before {
+  content: "\e605";
+}
+.cux-icon-new:before {
+  content: "\e606";
+}
+.cux-icon-settings:before {
+  content: "\e607";
+}
+.cux-icon-filter:before {
+  content: "\e900";
+}
+.cux-icon-edit:before {
+  content: "\e609";
+}
+.cux-icon-delete:before {
+  content: "\e60a";
+}
+.cux-icon-remove:before {
+  content: "\e60b";
+}
+.cux-icon-share:before {
+  content: "\e60c";
+}
+.cux-icon-refresh:before {
+  content: "\e60d";
+}
+.cux-icon-lock:before {
+  content: "\e60e";
+}
+.cux-icon-lock_unlock:before {
+  content: "\e60f";
+}
+.cux-icon-key:before {
+  content: "\e610";
+}
+.cux-icon-mail:before {
+  content: "\e611";
+}
+.cux-icon-calendar:before {
+  content: "\e612";
+}
+.cux-icon-notes:before {
+  content: "\e613";
+}
+.cux-icon-annotation:before {
+  content: "\e615";
+}
+.cux-icon-chat:before {
+  content: "\e616";
+}
+.cux-icon-wifi:before {
+  content: "\e62b";
+}
+.cux-icon-print:before {
+  content: "\e617";
+}
+.cux-icon-charge:before {
+  content: "\e618";
+}
+.cux-icon-bell:before {
+  content: "\e619";
+}
+.cux-icon-flag:before {
+  content: "\e61a";
+}
+.cux-icon-alert:before {
+  content: "\e61b";
+}
+.cux-icon-exclamationmark:before {
+  content: "\e61c";
+}
+.cux-icon-exclamationbox:before {
+  content: "\e61d";
+}
+.cux-icon-warning:before {
+  content: "\e61e";
+}
+.cux-icon-asterisk:before {
+  content: "\e620";
+}
+.cux-icon-rating_fill:before {
+  content: "\e61f";
+}
+.cux-icon-location:before {
+  content: "\e621";
+}
+.cux-icon-attachment:before {
+  content: "\e622";
+}
+.cux-icon-pin:before {
+  content: "\e623";
+}
+.cux-icon-information:before {
+  content: "\e624";
+}
+.cux-icon-help:before {
+  content: "\e625";
+}
+.cux-icon-target:before {
+  content: "\e626";
+}
+.cux-icon-add2:before {
+  content: "\e627";
+}
+.cux-icon-subtract:before {
+  content: "\e628";
+}
+.cux-icon-reduce:before {
+  content: "\e629";
+}
+.cux-icon-expand:before {
+  content: "\e62a";
+}
+.cux-icon-move:before {
+  content: "\e62c";
+}
+.cux-icon-download:before {
+  content: "\e62d";
+}
+.cux-icon-upload:before {
+  content: "\e642";
+}
+.cux-icon-history:before {
+  content: "\e62e";
+}
+.cux-icon-undo:before {
+  content: "\e62f";
+}
+.cux-icon-redo:before {
+  content: "\e630";
+}
+.cux-icon-prohibited:before {
+  content: "\e631";
+}
+.cux-icon-view:before {
+  content: "\e632";
+}
+.cux-icon-view_no:before {
+  content: "\e633";
+}
+.cux-icon-allergy1:before {
+  content: "\e634";
+}
+.cux-icon-search:before {
+  content: "\e635";
+}
+.cux-icon-zoom_in:before {
+  content: "\e636";
+}
+.cux-icon-zoom_out:before {
+  content: "\e637";
+}
+.cux-icon-link:before {
+  content: "\e638";
+}
+.cux-icon-link_broken:before {
+  content: "\e639";
+}
+.cux-icon-document:before {
+  content: "\e63a";
+}
+.cux-icon-document_forward:before {
+  content: "\e63b";
+}
+.cux-icon-document_download:before {
+  content: "\e63c";
+}
+.cux-icon-document_search:before {
+  content: "\e63d";
+}
+.cux-icon-report:before {
+  content: "\e63e";
+}
+.cux-icon-copy:before {
+  content: "\e63f";
+}
+.cux-icon-copy_warning:before {
+  content: "\e640";
+}
+.cux-icon-book1:before {
+  content: "\e641";
+}
+.cux-icon-book2:before {
+  content: "\e644";
+}
+.cux-icon-arrow_down:before {
+  content: "\e645";
+}
+.cux-icon-arrow_left:before {
+  content: "\e649";
+}
+.cux-icon-arrow_right:before {
+  content: "\e646";
+}
+.cux-icon-arrow_up:before {
+  content: "\e647";
+}
+.cux-icon-sort:before {
+  content: "\e643";
+}
+.cux-icon-carrot_down:before {
+  content: "\e648";
+}
+.cux-icon-carrot_up:before {
+  content: "\e64b";
+}
+.cux-icon-carrot_left:before {
+  content: "\e614";
+}
+.cux-icon-carrot_right:before {
+  content: "\e64a";
+}
+.cux-icon-rewind:before {
+  content: "\e901";
+}
+.cux-icon-forward:before {
+  content: "\e902";
+}
+.cux-icon-chevron_right:before {
+  content: "\e64e";
+}
+.cux-icon-chevron_left:before {
+  content: "\e64f";
+}
+.cux-icon-chart_column:before {
+  content: "\e650";
+}
+.cux-icon-chart_column_stacked:before {
+  content: "\e651";
+}
+.cux-icon-chart_column_100:before {
+  content: "\e652";
+}
+.cux-icon-chart_line:before {
+  content: "\e653";
+}
+.cux-icon-chart_line_isolated:before {
+  content: "\e654";
+}
+.cux-icon-chart_pie:before {
+  content: "\e655";
+}
+.cux-icon-chart_row:before {
+  content: "\e656";
+}
+.cux-icon-chart_row_stacked:before {
+  content: "\e657";
+}
+.cux-icon-chart_row_stacked_100:before {
+  content: "\e658";
+}
+.cux-icon-checkbox_complete:before {
+  content: "\e659";
+}
+.cux-icon-checkmark_action:before {
+  content: "\e65a";
+}
+.cux-icon-checkmark_status:before {
+  content: "\e65b";
+}
+.cux-icon-import:before {
+  content: "\e65d";
+}
+.cux-icon-export:before {
+  content: "\e903";
+}
+.cux-icon-process:before {
+  content: "\e65e";
+}
+.cux-icon-list_1:before {
+  content: "\e65f";
+}
+.cux-icon-menu:before {
+  content: "\e660";
+}
+.cux-icon-clinicaloverview:before {
+  content: "\e661";
+}
+.cux-icon-encounters:before {
+  content: "\e662";
+}
+.cux-icon-immunization:before {
+  content: "\e663";
+}
+.cux-icon-lab_results:before {
+  content: "\e664";
+}
+.cux-icon-medication:before {
+  content: "\e665";
+}
+.cux-icon-vitals:before {
+  content: "\e666";
+}
+.cux-icon-xray:before {
+  content: "\e667";
+}
+.cux-icon-phone:before {
+  content: "\e668";
+}
+.cux-icon-phone_in:before {
+  content: "\e669";
+}
+.cux-icon-phone_out:before {
+  content: "\e66a";
+}
+.cux-icon-phone_ring:before {
+  content: "\e66b";
+}
+.cux-icon-response_1:before {
+  content: "\e66c";
+}
+.cux-icon-response_2:before {
+  content: "\e66d";
+}
+.cux-icon-response_3:before {
+  content: "\e66e";
+}
+.cux-icon-response_4:before {
+  content: "\e66f";
+}
+.cux-icon-newwindow:before {
+  content: "\e670";
+}
+.cux-icon-pending:before {
+  content: "\e671";
+}
+.cux-icon-rating_empty:before {
+  content: "\e672";
+}
+.cux-icon-close:before {
+  content: "\e673";
+}
+.cux-icon-ellipsis:before {
+  content: "\e674";
+}
+.cux-icon-globe:before {
+  content: "\e675";
+}
+.cux-icon-favorite_filled:before {
+  content: "\e676";
+}
+.cux-icon-favorite_empty:before {
+  content: "\e677";
+}
+.cux-icon-closed:before {
+  content: "\e904";
+}
+.cux-icon-group5:before {
+  content: "\e905";
+}
+.cux-icon-globalmedical-Copy:before {
+  content: "\e906";
+}
+.cux-icon-globalmedical8:before {
+  content: "\e907";
+}
+.cux-icon-accessible1:before {
+  content: "\e908";
+}
+.cux-icon-reply-Copy:before {
+  content: "\e909";
+}
+.cux-icon-replyall-Copy:before {
+  content: "\e90a";
+}
+.cux-icon-forward-Copy:before {
+  content: "\e90b";
+}
+.cux-icon-cloud2:before {
+  content: "\e90c";
+}
+.cux-icon-cloud1:before {
+  content: "\e90d";
+}
+.cux-icon-clock2:before {
+  content: "\e90e";
+}
+.cux-icon-stopwatch8:before {
+  content: "\e90f";
+}
+.cux-icon-video4:before {
+  content: "\e910";
+}
+.cux-icon-xls4:before {
+  content: "\e911";
+}
+.cux-icon-pdf4:before {
+  content: "\e912";
+}
 
