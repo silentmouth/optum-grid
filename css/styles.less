@@ -172,12 +172,6 @@ html {
 	font-size: @size-base;
 	line-height: @line-height;
 }
-
-html.compact {
-	font-size: @size-base-compact;
-	line-height: @line-height-compact;
-}
-
 body {
 	font-family: @font-family-base;
 	line-height: @line-height;
@@ -261,7 +255,9 @@ body {
 
 #header {
 	margin: 0;
-	flex-shrink: 0; /* 2 */
+	-webkit-flex-shrink: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
 }
 #main {
 	margin-top: @unit-4;
@@ -280,7 +276,9 @@ body {
 	padding: @unit-2;
 	font-size: @size-small;
 	margin: 0;
-	flex-shrink: 0; /* 2 */
+	-webkit-flex-shrink: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
 }
 
 /* header and nav */
@@ -1147,6 +1145,29 @@ input[type="submit"]:focus {
 
 
 
+/* =========================================  COMPACT VIEW QUERIES  ========================================= */
+
+
+
+html.compact {
+	font-size: @size-base-compact;
+	line-height: @line-height-compact;
+}
+html.compact #header { font-size: 14px; }
+html.compact #global-utility-nav,
+html.compact #footer,
+html.compact .size-small,
+html.compact p.size-small,
+html.compact .size-small p {
+	font-size: 12px;
+}
+html.compact .size-xsmall,
+html.compact p.size-xsmall,
+html.compact .size-xsmall p {
+	font-size: 10px;
+}
+
+
 
 /* =========================================  MEDIA QUERIES  ========================================= */
 
@@ -1219,6 +1240,8 @@ html.gridlines #sidebar {
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	width: 200px;
+	height: 24px;
 	/*right: 0;*/
 	/*margin: 0 auto;*/
 	margin: 0;
@@ -1226,6 +1249,7 @@ html.gridlines #sidebar {
 	color: white;
 	border: none;
 	padding: .25rem 1rem;
+	z-index: 10000;
 }
 /*html { background: url(images/gridlines-8-and-24.png);
 }*/
@@ -1233,6 +1257,8 @@ html.gridlines #sidebar {
 	position: fixed;
 	top: 0;
 	left: 0;
+	width: 200px;
+	height: 24px;
 	/*right: 0;*/
 	/*margin: 0 auto;*/
 	margin: 0;
@@ -1240,5 +1266,5 @@ html.gridlines #sidebar {
 	color: white;
 	border: none;
 	padding: .25rem 1rem;
-
+	z-index: 10000;
 }
