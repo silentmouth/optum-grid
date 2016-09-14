@@ -31,9 +31,25 @@ $(document).ready(function(){
 	$('#toggleGridLines').on('click', function() {
 		$('html').toggleClass('gridlines');
 	});
-	$('#toggleCompactView').on('click', function() {
-		$('html').toggleClass('compact');
-	})
+
+	
+	function toggleCompactView() {
+		var $html = $('html'),
+			$btnToggleCompactView = $(this),
+			isCompact = $html.hasClass('compact');
+		if (isCompact) {
+			$html.removeClass('compact');
+			$btnToggleCompactView.text('Compact View');
+		} else {
+			$html.addClass('compact');
+			$btnToggleCompactView.text('Standard View');
+		}
+	};
+	$('#toggleCompactView').click(toggleCompactView);
+	
+	
+
+	
 	
 	
 	
