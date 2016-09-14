@@ -818,6 +818,19 @@ input[type="submit"]:focus {
 	.xsmall-col-2-3 { width: 66.66%; }
 	.xsmall-col-1-6 { width: 16.66%; }
 	
+	/* SMALLER GUTTERS ON MOBILE */
+	
+	/*@grid-gutter: 			@unit-2;
+	@grid-gutter-narrow: 	@unit-1;
+	@grid-gutter-wide: 		@unit-3;*/
+	
+	/* standard & narrow gutters */
+	.grid, .grid.grid-narrow-gutter { margin-right: -@unit-2; }
+	[class*='col-'], .grid.grid-narrow-gutter [class*='col-'] { padding: 0 @unit-2 @unit-2 0; }
+	/* wider gutters */
+	.grid.grid-wide-gutter { margin-right: -@unit-3; }
+	.grid.grid-wide-gutter [class*='col-'] { padding: 0 @unit-3 @unit-3 0; }
+
 	.hide-on-xsmall-screen { display: none !important; }
 }
 
@@ -1069,9 +1082,7 @@ input[type="submit"]:focus {
 @media (max-width: @breakpoint-xsmall) {
 	
 	html { font-size: 14px; }
-	
-	@grid-gutter: @unit-2;
-	
+		
 	#logo { margin: @unit-1 @unit-2; }
 	#main { margin-top: @unit-2; }
 	#content { padding: 0 @unit-2 @unit-2; }
