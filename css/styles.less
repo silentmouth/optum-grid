@@ -201,7 +201,7 @@ a, a:visited, a:hover, a:active { color: @color-link; }
 
 ol, ul, blockquote, pre{ margin-left: @unit-4; }
 
-ol,ul { list-style-type: circle; list-style-position: inside; margin-bottom: @unit-4; }
+ol,ul { list-style-type: circle; list-style-position: outside; margin-bottom: @unit-4; }
 ol ol,ul ul { font-style: italic; font-size: 1rem; margin-bottom: 0; }
 ol { list-style-type: decimal; }
 ol ol {list-style-type: lower-latin; }
@@ -506,13 +506,29 @@ label.form-check {
 @selectEndColor: @color-gray-1;
 
 select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 	background-color: @selectStartColor;
-	background: -webkit-gradient(linear, left top, left bottom, from(@selectStartColor), to(@selectEndColor));
-	background: -webkit-linear-gradient(top, @selectStartColor, @selectEndColor);
-	background: -moz-linear-gradient(top, @selectStartColor, @selectEndColor);
-	background: -ms-linear-gradient(top, @selectStartColor, @selectEndColor);
-	background: -o-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow.png"), -webkit-gradient(linear, left top, left bottom, from(@selectStartColor), to(@selectEndColor));
+	background-image: url("../images/dropdown_arrow.png"), -webkit-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow.png"), -moz-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow.png"), -ms-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow.png"), -o-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow.png"), linear-gradient(to bottom, @selectStartColor, @selectEndColor);
+	background-position: center right;
+    background-repeat: no-repeat;
 }
+select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+/* remove custom background not supported in Internet Explorer 9 and Internet Explorer 10:*/
+/*@media screen and (min-width:0\0) { 
+    select {
+        background:none;
+        padding: 5px;
+    }
+}*/
 /*select:after {
   font-family: 'UXCoE-Icons' !important;
   speak: none;
@@ -544,6 +560,7 @@ button,
 input[type="button"],
 input[type="submit"] {
 	font-size: @size-base;
+	font-family: @font-family-base;
 	background-color: @btnStartColor;
 	background: -webkit-gradient(linear, left top, left bottom, from(@btnStartColor), to(@btnEndColor));
 	background: -webkit-linear-gradient(top, @btnStartColor, @btnEndColor);
@@ -619,6 +636,7 @@ input[type="submit"]:focus {
 }
 
 [disabled], .disabled {
+	background: @color-gray-light;
 	border-color: @color-gray;
 	color: @color-gray-med;
 }
@@ -728,7 +746,7 @@ input[type="submit"]:focus {
 .grid.grid-narrow-gutter [class*='col-'] { padding: 0 @grid-gutter-narrow @grid-gutter-narrow 0; }
 
 /* no gutter */
-.grid.grid-no-gutter { margin: 0; }
+.grid.grid-no-gutter { margin-right: 0; }
 .grid.grid-no-gutter [class*='col-'] { padding: 0; }
 
 
@@ -1058,6 +1076,22 @@ input[type="submit"]:focus {
 	#main { margin-top: @unit-2; }
 	#content { padding: 0 @unit-2 @unit-2; }
 	#global-utility-nav { font-size: @unit-1and1half; padding-right: @unit-1half; }
+	
+	.form-check label {
+		padding-top: @unit-1;
+		padding-bottom: @unit-1;
+	}
+		.form-field,
+	button,
+	.button,
+	input[type="button"],
+	input[type="submit"],
+	.button-link {
+		height: @unit-6;
+	}
+	.button.button-large {
+		height: @unit-8;
+	}
 	
 }
 
