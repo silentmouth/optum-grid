@@ -1,0 +1,379 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Base sizes and page grid</title>
+
+<!--<link href="css/styles.css" rel="stylesheet" type="text/css">-->
+<link rel="stylesheet" type="text/css" href="UXCoE-Icons/style.css" />
+
+<script src="js/jquery-1.11.1.min.js"></script>
+
+
+<!--<link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
+<link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+<!-- set options before less.js script -->
+<script>
+  less = {
+    env: "development",
+    async: false,
+    fileAsync: false,
+    poll: 1000,
+    functions: {},
+    dumpLineNumbers: "comments",
+    relativeUrls: true,
+    rootpath: "/"
+  };
+</script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>-->
+<script src="js/less.min.js" type="text/javascript"></script>
+
+
+
+<script src="js/scripts.js"></script>
+
+
+</head>
+
+
+
+<body>
+
+
+<!--<button role="button" id="toggleGridLines">Show/Hide Grid Lines</button>-->
+<button role="button" id="toggleCompactView">Compact View</button>
+
+<header id="header">
+    <div id="global-utility-nav">
+        <ul class="nav-list">
+          <li><a href="#"><span class="cux-icon-person"><span class="oui-a11y-hidden">person icon</span></span> Welcome, Joe Schmoe</a></li>
+          <li class="hide-on-xsmall-screen"><a href="#">Themes <span class="cux-icon-arrow_down size-small"><span class="oui-a11y-hidden">arrow down icon</span></span></a>
+		  	<!--<ul>
+				<li><a href="#">Standard</a></li>
+				<li><a href="#">Compact</a></li>
+			</ul>-->
+		  </li>
+          <li><a href="#"><span class="cux-icon-help"><span class="oui-a11y-hidden">help icon</span></span> Help</a></li>
+          <li><a href="#">Sign Out</a></li>
+        </ul>
+      </div>
+      
+    <header id="header-main">
+      
+      <div id="logo"><!--<img id="logo-image" src="images/optum-app-logo.svg" width="339" height="40" alt="Optum Application Name"/>-->
+	  <img id="logo-image" src="images/optum-app-logo.png" alt="Optum Application Name"/>
+      	<!--<img id="logo-image" src="images/optum-logo.svg" alt="Optum" /><div id="app-name">Application name goes here</div>-->
+	</div>
+      <nav role="navigation" id="nav-primary">
+          <a href="#" class="active">Nav Item 1</a></li>
+          <a href="#">Nav Item 2</a>
+          <a href="#">Nav Item 3</a>
+          <a href="#">Nav Item 4</a>
+      </nav>
+    </header>
+
+    <nav id="nav-secondary" class="hide-on-small-screen">
+      <a href="#" class="active">Nav Item 1</a>
+      <a href="#">Nav Item 2</a>
+      <a href="#">Nav Item 3</a>
+      <a href="#">Nav Item 4</a>
+    </nav>
+    
+</header>
+<!-- /end #header -->
+    
+    
+<main id="main">
+  <aside id="sidebar" class="hide-on-medium-screen">
+    <nav id="nav-secondary-vert">
+    	<a href="#">Kitchen Sink</a>
+        <a href="tables.html" class="active">Tables</a>
+        <a href="icons.html">Icons - New</a>
+        <a href="#">Link 4</a>
+    </nav>
+  </aside>
+  <div id="content" class="content">
+  
+  <h1>Responsive Tables</h1>
+	
+		<h2>Responsive Table Example 1</h2>
+    <p>This table should scroll horizontally on medium / small screens</p>
+	
+	<div class="table-action-container buttons-with-icons button-links clearfix">
+        <button class="button" role="button"><span class="cux-icon-add2"></span><span class="button-text">Add Row</span></button>
+        <button class="button" role="button"><span class="cux-icon-delete"></span><span class="button-text">Delete Record</span></button>
+        <button class="button" role="button"><span class="cux-icon-edit"></span><span class="button-text">Show/Hide Columns</span></button>
+        <button class="button" role="button"><span class="cux-icon-filter"></span><span class="button-text">Clear All Filters</span></button>
+        <button class="button" role="button"><span class="cux-icon-sort"></span><span class="button-text">Sort Columns</span></button>
+        <button class="button" role="button"><span class="cux-icon-export"></span><span class="button-text">Export (CSV)</span></button>
+	</div>
+	
+	<table class="rtable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Patient ID</th>
+        <th>Status</th>
+        <th>View More</th>
+        <th>Days Since Admittance</th>
+        <th>Date Admitted</th>
+        <th>Time Admitted</th>
+        <th>Notes</th>
+        <th>Claim Amount</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td data-title="Name">Hanks, Tom</td>
+        <td data-title="Age">99 y</td>
+        <td data-title="Sex">M</td>
+        <td data-title="Patient ID">P0006</td>
+        <td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+        <td data-title="View More">Lab Results, Medications<br></td>
+        <td data-title="Days Since Admittance">---</td>
+        <td data-title="Date Admitted">---</td>
+        <td data-title="Time Admitted">---</td>
+        <td data-title="Notes">---</td>
+        <td data-title="Claim Amount">---</td>
+      </tr>
+      <tr>
+        <td data-title="Name">Cruise, Tom</td>
+        <td data-title="Age">50 y</td>
+        <td data-title="Sex">M</td>
+        <td data-title="Patient ID">P0001</td>
+        <td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+        <td data-title="View More">Allergies, Lab Results, Medications</td>
+        <td data-title="Days Since Admittance">---</td>
+        <td data-title="Date Admitted">---</td>
+        <td data-title="Tme Admitted">---</td>
+        <td data-title="Notes">---</td>
+        <td data-title="Claim Amount">---</td>
+      </tr>
+      <tr>
+        <td data-title="Name">Pacino, Al</td>
+        <td data-title="Age">21 y</td>
+        <td data-title="Sex">M</td>
+        <td data-title="Patient ID">P0004</td>
+        <td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+        <td data-title="View More">Allergies</td>
+        <td data-title="Days Since Admittance">---</td>
+        <td data-title="Date Admitted">---</td>
+        <td data-title="Time Admitted">---</td>
+        <td data-title="Notes">---</td>
+        <td data-title="Claim Amount">---</td>
+      </tr>
+      <tr>
+        <td data-title="Name">Mrinalini, Priyanka</td>
+        <td data-title="Age">37 y</td>
+        <td data-title="Sex">F</td>
+        <td data-title="Patient ID">P0009</td>
+        <td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+        <td data-title="View More">Allergies, Lab Results</td>
+        <td data-title="Days Since Admittance">5</td>
+        <td data-title="Date Admitted">03-09-2015</td>
+        <td data-title="Time Admitted">00:33</td>
+        <td data-title="Notes">Symptoms: Chest pain, nausea, vomiting and intestinal distress</td>
+        <td data-title="Claim Amount">$549.00</td>
+      </tr>
+      <tr>
+      	<td data-title="Name">Roberts, Julia</td>
+      	<td data-title="Age">91 y</td>
+      	<td data-title="Sex">F</td>
+      	<td data-title="Patient ID">P0002</td>
+      	<td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+      	<td data-title="View More">Medications</td>
+      	<td data-title="Days Since Admittance">---</td>
+      	<td data-title="Date Admitted">---</td>
+      	<td data-title="Time Admitted">---</td>
+      	<td data-title="Notes">---</td>
+      	<td data-title="Claim Amount">---</td>
+      	</tr>
+      <tr>
+      	<td data-title="Name">Hackman, Gene</td>
+      	<td data-title="Age">77 y</td>
+      	<td data-title="Sex">M</td>
+      	<td data-title="Patient ID">P0003</td>
+      	<td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+      	<td data-title="View More">Medications</td>
+      	<td data-title="Days Since Admittance">17</td>
+      	<td data-title="Date Admitted">06-08-2015</td>
+      	<td data-title="Time Admitted">20:46</td>
+      	<td data-title="Notes">Last visit received hydrocordisone</td>
+      	<td data-title="Claim Amount">$629.00</td>
+      	</tr>
+      <tr>
+      	<td data-title="Name">De Niro, Robert</td>
+      	<td data-title="Age">38 y </td>
+      	<td data-title="Sex">M</td>
+      	<td data-title="Patient ID">P0005</td>
+      	<td data-title="Status"><span class="cux-icon-prohibited"><span class="oui-a11y-hidden ng-binding">Inactive</span></span></td>
+      	<td data-title="View More">Lab Results, Medicatios</td>
+      	<td data-title="Days Since Admittance">---</td>
+      	<td data-title="Date Admitted">---</td>
+      	<td data-title="Time Admitted">---</td>
+      	<td data-title="Notes">---</td>
+      	<td data-title="Claim Amount">---</td>
+      	</tr>
+      <tr>
+      	<td data-title="Name">Decaprio, Lionardo</td>
+      	<td data-title="Age">70 y</td>
+      	<td data-title="Sex">M</td>
+      	<td data-title="Patient ID">P0007</td>
+      	<td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+      	<td data-title="View More">Lab Results</td>
+      	<td data-title="Days Since Admittance">20</td>
+      	<td data-title="Date Admitted">09-18-2014</td>
+      	<td data-title="Time Admitted">17:53</td>
+      	<td data-title="Notes">Checked in complaining of dehydration</td>
+      	<td data-title="Claim Amount">$589.00</td>
+      	</tr>
+      </tbody>
+    </table>
+	
+    
+	<h2>Responsive Table Example 2</h2>
+    <p>This table should be flipped (with fixed first column) on medium / small screens, and display as cards instead of a table on very small screens</p>
+	
+	<table class="rtable rtable--flip rtable--flip-cards">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Patient ID</th>
+        <th>Status</th>
+        <th>View More</th>
+        <th>Days Since Admittance</th>
+        <th>Date Admitted</th>
+        <th>Time Admitted</th>
+        <th>Notes</th>
+        <th>Claim Amount</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td data-title="Name">Hanks, Tom</td>
+        <td data-title="Age">99 y</td>
+        <td data-title="Sex">M</td>
+        <td data-title="Patient ID">P0006</td>
+        <td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+        <td data-title="View More">Lab Results, Medications<br></td>
+        <td data-title="Days Since Admittance">---</td>
+        <td data-title="Date Admitted">---</td>
+        <td data-title="Time Admitted">---</td>
+        <td data-title="Notes">---</td>
+        <td data-title="Claim Amount">---</td>
+      </tr>
+      <tr>
+        <td data-title="Name">Cruise, Tom</td>
+        <td data-title="Age">50 y</td>
+        <td data-title="Sex">M</td>
+        <td data-title="Patient ID">P0001</td>
+        <td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+        <td data-title="View More">Allergies, Lab Results, Medications</td>
+        <td data-title="Days Since Admittance">---</td>
+        <td data-title="Date Admitted">---</td>
+        <td data-title="Tme Admitted">---</td>
+        <td data-title="Notes">---</td>
+        <td data-title="Claim Amount">---</td>
+      </tr>
+      <tr>
+        <td data-title="Name">Pacino, Al</td>
+        <td data-title="Age">21 y</td>
+        <td data-title="Sex">M</td>
+        <td data-title="Patient ID">P0004</td>
+        <td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+        <td data-title="View More">Allergies</td>
+        <td data-title="Days Since Admittance">---</td>
+        <td data-title="Date Admitted">---</td>
+        <td data-title="Time Admitted">---</td>
+        <td data-title="Notes">---</td>
+        <td data-title="Claim Amount">---</td>
+      </tr>
+      <tr>
+        <td data-title="Name">Mrinalini, Priyanka</td>
+        <td data-title="Age">37 y</td>
+        <td data-title="Sex">F</td>
+        <td data-title="Patient ID">P0009</td>
+        <td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+        <td data-title="View More">Allergies, Lab Results</td>
+        <td data-title="Days Since Admittance">5</td>
+        <td data-title="Date Admitted">03-09-2015</td>
+        <td data-title="Time Admitted">00:33</td>
+        <td data-title="Notes">Symptoms: Chest pain, nausea, vomiting and intestinal distress</td>
+        <td data-title="Claim Amount">$549.00</td>
+      </tr>
+      <tr>
+      	<td data-title="Name">Roberts, Julia</td>
+      	<td data-title="Age">91 y</td>
+      	<td data-title="Sex">F</td>
+      	<td data-title="Patient ID">P0002</td>
+      	<td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+      	<td data-title="View More">Medications</td>
+      	<td data-title="Days Since Admittance">---</td>
+      	<td data-title="Date Admitted">---</td>
+      	<td data-title="Time Admitted">---</td>
+      	<td data-title="Notes">---</td>
+      	<td data-title="Claim Amount">---</td>
+      	</tr>
+      <tr>
+      	<td data-title="Name">Hackman, Gene</td>
+      	<td data-title="Age">77 y</td>
+      	<td data-title="Sex">M</td>
+      	<td data-title="Patient ID">P0003</td>
+      	<td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+      	<td data-title="View More">Medications</td>
+      	<td data-title="Days Since Admittance">17</td>
+      	<td data-title="Date Admitted">06-08-2015</td>
+      	<td data-title="Time Admitted">20:46</td>
+      	<td data-title="Notes">Last visit received hydrocordisone</td>
+      	<td data-title="Claim Amount">$629.00</td>
+      	</tr>
+      <tr>
+      	<td data-title="Name">De Niro, Robert</td>
+      	<td data-title="Age">38 y </td>
+      	<td data-title="Sex">M</td>
+      	<td data-title="Patient ID">P0005</td>
+      	<td data-title="Status"><span class="cux-icon-prohibited"><span class="oui-a11y-hidden ng-binding">Inactive</span></span></td>
+      	<td data-title="View More">Lab Results, Medicatios</td>
+      	<td data-title="Days Since Admittance">---</td>
+      	<td data-title="Date Admitted">---</td>
+      	<td data-title="Time Admitted">---</td>
+      	<td data-title="Notes">---</td>
+      	<td data-title="Claim Amount">---</td>
+      	</tr>
+      <tr>
+      	<td data-title="Name">Decaprio, Lionardo</td>
+      	<td data-title="Age">70 y</td>
+      	<td data-title="Sex">M</td>
+      	<td data-title="Patient ID">P0007</td>
+      	<td data-title="Status"><span class="cux-icon-checkmark_status"><span class="oui-a11y-hidden ng-binding">Active</span></span></td>
+      	<td data-title="View More">Lab Results</td>
+      	<td data-title="Days Since Admittance">20</td>
+      	<td data-title="Date Admitted">09-18-2014</td>
+      	<td data-title="Time Admitted">17:53</td>
+      	<td data-title="Notes">Checked in complaining of dehydration</td>
+      	<td data-title="Claim Amount">$589.00</td>
+      	</tr>
+      </tbody>
+    </table>
+    
+
+   
+           
+           
+  </div>
+  <!-- /end #content --> 
+  
+</main>
+
+
+<footer id="footer">Footer goes here</footer>
+
+
+
+</body>
+</html>
