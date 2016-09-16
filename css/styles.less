@@ -1034,7 +1034,7 @@ input[type="submit"]:focus {
 
 /* small screen (tablet - 768px or smaller) */
 @media (max-width: @breakpoint-small) {
-	table {
+	table.rtable {
 	  /*!
 	  // IE needs inline-block to position scrolling shadows otherwise use:
 	  // display: block;
@@ -1048,7 +1048,7 @@ input[type="submit"]:focus {
 	  border-collapse: collapse;
 	  border-spacing: 0;
 	}
-	table,
+	table.rtable,
 	table.rtable--flip tbody {
 	  -webkit-overflow-scrolling: touch;
 	  background: -webkit-radial-gradient(left ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, -webkit-radial-gradient(right ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
@@ -1057,14 +1057,14 @@ input[type="submit"]:focus {
 	  background-attachment: scroll, scroll;
 	  background-repeat: no-repeat;
 	}
-	table td:first-child,
+	table.rtable td:first-child,
 	table.rtable--flip tbody tr:first-child {
 	  background-image: -webkit-linear-gradient(left, white 50%, rgba(255, 255, 255, 0) 100%);
 	  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
 	  background-repeat: no-repeat;
 	  background-size: 20px 100%;
 	}
-	table td:last-child,
+	table.rtable td:last-child,
 	table.rtable--flip tbody tr:last-child {
 	  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
 	  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
@@ -1137,6 +1137,58 @@ input[type="submit"]:focus {
 
 }
 
+
+/* extra small screen (mobile - 600px or smaller) */
+@media (max-width: @breakpoint-xsmall) {
+	
+	/* Force table to not be like tables anymore */
+	table.rtable--flip-cards, 
+	table.rtable--flip-cards thead, 
+	table.rtable--flip-cards tbody, 
+	table.rtable--flip-cards th, 
+	table.rtable--flip-cards td, 
+	table.rtable--flip-cards tr { 
+		display: block; 
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.rtable--flip-cards thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	table.rtable--flip-cards tr { border: 1px solid #ccc; }
+ 
+	table.rtable--flip-cards td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	table.rtable--flip-cards td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+ 
+	/*
+	Label the data
+	*/
+	table.rtable--flip-cards td:before { content: attr(data-title); }
+	
+}
 
 
 
