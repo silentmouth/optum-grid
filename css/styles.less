@@ -165,7 +165,10 @@ li ol,
 h1+h2, h2+h3, h3+h4, h4+h5, h5+h6 { margin-top: 1rem; }
 
 /* zero margin as needed */
-.form-group * + * { margin-top: 0; }
+.form-group * + *,
+[class^="col-"] + * {
+	margin-top: 0;
+}
 
 html {
 	color: @color-base;
@@ -327,6 +330,7 @@ body {
 #global-utility-nav a:hover {
 	background: @color-gray-7;
 }
+#global-utility-nav [class^="cux-icon"] { color: white; }
 
 #header-main {
 	background: #F1F1F1;
@@ -487,11 +491,18 @@ body {
     display: flex; align-items: center; height: @unit-6; }
 .panel-body { margin: 0; border: 1px solid @color-gray; border-top: none; padding: @unit-3; }
 
-.panel-header h2, .panel-header h3 { margin: 0; padding: 0; line-height: 1; display: -webkit-box; 
+.panel-header h2, .panel-header h3 {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	display: -webkit-box; 
     display: -moz-box; 
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; align-items: center; }
+    display: flex;
+	align-items: center;
+	flex: 1 1 0;
+}
 .panel-header [class^="cux-icon"] { margin-left: -8px; }
 .panel-header *+* { margin-top: 0; }
 
@@ -504,7 +515,7 @@ body {
 	padding-bottom: 0;
 }
 .form-group { /*padding-bottom: @unit-2;*/ }
-/*[class*='col-'] .form-group { padding-bottom: 0; }*/
+/*[class^="col-"] .form-group { padding-bottom: 0; }*/
 label { font-weight: bold; }
 legend {
 	font-weight: bold;
@@ -619,7 +630,6 @@ input[type="submit"]:focus {
 	border-color: @color-accent;
 	outline-color:  @color-accent;
 }
-
 .buttons-with-icons .button {
 	/*float: left;*/
 	margin: 0 @unit-1 @unit-1 0;
@@ -673,6 +683,8 @@ input[type="submit"]:focus {
 	background: @color-gray-light;
 	border-color: @color-gray;
 	color: @color-gray-med;
+	cursor: default;
+	outline-color: transparent;
 }
 
 .table-action-container {
@@ -775,12 +787,12 @@ input[type="submit"]:focus {
 	display: table;
 	clear: both;
 }
-[class*='col-'] {
+[class^="col-"] {
 	float: left;
 	padding: 0 @grid-gutter @grid-gutter 0;
 	width: 100%;
 }
-[class*='col-'] + [class*='col-'] { margin-top: 0; }
+[class^="col-"] + [class^="col-"] { margin-top: 0; }
 .col-full { width: 100%; }
 .col-1-2 { width: 50%; }
 .col-3-4 { width: 75%; }
@@ -793,15 +805,15 @@ input[type="submit"]:focus {
 
 /* for wider gutters */
 .grid.grid-wide-gutter { margin-right: -@grid-gutter-wide; }
-.grid.grid-wide-gutter [class*='col-'] { padding: 0 @grid-gutter-wide @grid-gutter-wide 0; }
+.grid.grid-wide-gutter [class^="col-"] { padding: 0 @grid-gutter-wide @grid-gutter-wide 0; }
 
 /* for narrower gutters */
 .grid.grid-narrow-gutter { margin-right: -@grid-gutter-narrow; }
-.grid.grid-narrow-gutter [class*='col-'] { padding: 0 @grid-gutter-narrow @grid-gutter-narrow 0; }
+.grid.grid-narrow-gutter [class^="col-"] { padding: 0 @grid-gutter-narrow @grid-gutter-narrow 0; }
 
 /* no gutter */
 .grid.grid-no-gutter { margin-right: 0; }
-.grid.grid-no-gutter [class*='col-'] { padding: 0; }
+.grid.grid-no-gutter [class^="col-"] { padding: 0; }
 
 
 /* boxed content (box inside a column) */
@@ -880,10 +892,10 @@ input[type="submit"]:focus {
 	
 	/* standard & narrow gutters */
 	.grid, .grid.grid-narrow-gutter { margin-right: -@unit-2; }
-	[class*='col-'], .grid.grid-narrow-gutter [class*='col-'] { padding: 0 @unit-2 @unit-2 0; }
+	[class^="col-"], .grid.grid-narrow-gutter [class^="col-"] { padding: 0 @unit-2 @unit-2 0; }
 	/* wider gutters */
 	.grid.grid-wide-gutter { margin-right: -@unit-3; }
-	.grid.grid-wide-gutter [class*='col-'] { padding: 0 @unit-3 @unit-3 0; }
+	.grid.grid-wide-gutter [class^="col-"] { padding: 0 @unit-3 @unit-3 0; }
 
 	.hide-on-xsmall-screen { display: none !important; }
 }
@@ -1265,4 +1277,34 @@ html.gridlines #sidebar {
 	border: none;
 	padding: .25rem 1rem;
 	z-index: 10000;
+}
+
+
+
+/* =========================================  OPTUM.COM STYLE (NEW ICONS ETC)  ========================================= */
+
+html.theme-optum-com {
+}
+html.theme-optum-com select {
+	background-image: url("../images/dropdown_arrow_hollow.png"), -webkit-gradient(linear, left top, left bottom, from(@selectStartColor), to(@selectEndColor));
+	background-image: url("../images/dropdown_arrow_hollow.png"), -webkit-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow_hollow.png"), -moz-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow_hollow.png"), -ms-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow_hollow.png"), -o-linear-gradient(top, @selectStartColor, @selectEndColor);
+	background-image: url("../images/dropdown_arrow_hollow.png"), linear-gradient(to bottom, @selectStartColor, @selectEndColor);
+}
+html.theme-optum-com [class^="cux-icon"] {
+	color: #c25608;
+}
+
+
+
+html.theme-optum-com .buttons-with-icons [class^="cux-icon"],
+html.theme-optum-com .button-with-icon [class^="cux-icon"] {
+	color: @color-gray-darkest;
+}
+
+html.theme-optum-com .button-link [class^="cux-icon"],
+html.theme-optum-com .button-links .button [class^="cux-icon"] {
+	color: @color-link;
 }
