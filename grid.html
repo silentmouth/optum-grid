@@ -1,0 +1,617 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Base sizes and page grid</title>
+
+<!--<link href="css/styles.css" rel="stylesheet" type="text/css">-->
+<!--<link rel="stylesheet" type="text/css" href="UXCoE-Icons/style.css" />-->
+<link rel="stylesheet" type="text/css" href="optum-icons/style.css" />
+
+<script src="js/jquery-1.11.1.min.js"></script>
+
+
+<!--<link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
+<!--<link rel="stylesheet/less" type="text/css" href="css/styles.less" />-->
+<!-- set options before less.js script -->
+<!--<script>
+  less = {
+    env: "development",
+    async: false,
+    fileAsync: false,
+    poll: 1000,
+    functions: {},
+    dumpLineNumbers: "comments",
+    relativeUrls: true,
+    rootpath: "/"
+  };
+</script>-->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>-->
+<!--<script src="js/less.min.js" type="text/javascript"></script>-->
+
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+
+<!--<button role="button" id="toggleGridLines">Show/Hide Grid Lines</button>-->
+<button role="button" id="toggleCompactView">Compact View</button>
+
+<header id="header">
+    <div id="global-utility-nav">
+        <ul class="nav-list">
+          <li><a href="#"><span class="cux-icon-person"><span class="oui-a11y-hidden">person icon</span></span> Welcome, Joe Schmoe</a></li>
+          <li class="hide-on-xsmall-screen"><a href="#">Themes <span class="cux-icon-arrow_down size-small"><span class="oui-a11y-hidden">arrow down icon</span></span></a>
+		  	<!--<ul>
+				<li><a href="#">Standard</a></li>
+				<li><a href="#">Compact</a></li>
+			</ul>-->
+		  </li>
+          <li><a href="#"><span class="cux-icon-help"><span class="oui-a11y-hidden">help icon</span></span> Help</a></li>
+          <li><a href="#">Sign Out</a></li>
+        </ul>
+      </div>
+      
+    <header id="header-main">
+      
+      <div id="logo"><!--<img id="logo-image" src="images/optum-app-logo.svg" width="339" height="40" alt="Optum Application Name"/>-->
+	  <img id="logo-image" src="images/optum-app-logo.png" alt="Optum Application Name"/>
+      	<!--<img id="logo-image" src="images/optum-logo.svg" alt="Optum" /><div id="app-name">Application name goes here</div>-->
+	</div>
+      <nav role="navigation" id="nav-primary">
+		<a href="index.html">Kitchen Sink</a>
+		<a href="grid.html" class="active">Grid</a>
+		<a href="forms.html">Forms</a>		
+		<a href="panels.html">Panels</a>
+<a href="panels2.html">Panels 2</a>
+		<a href="tables.html">Tables</a>
+		<a href="icons.html">Icons</a>
+      </nav>
+    </header>
+
+    <nav id="nav-secondary" class="hide-on-small-screen">
+      <a href="#" class="active">Subnav Item 1</a>
+      <a href="#">Subnav Item 2</a>
+      <a href="#">Subnav Item 3</a>
+      <a href="#">Subnav Item 4</a>
+    </nav>
+    
+</header>
+<!-- /end #header -->
+    
+    
+<main id="main">
+  <aside id="sidebar" class="hide-on-medium-screen">
+    <nav id="nav-secondary-vert">
+    	<a href="#" class="active">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </nav>
+  </aside>
+  <div id="content" class="content">
+  
+  
+      <!-- GRID -->
+    
+      <h1>12 column grid</h1>
+      <h2>Simple fluid responsive grid with fixed gutters and equal height blocks in rows</h2>
+      <div class="grid-container">
+      <div class="grid">
+        <div class="col-2-3">
+          <div class="module">
+            <h3>2/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-6">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>Fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>Pellentesque habitant morbi, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-3-4">
+          <div class="module">
+            <h3>3/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-8">
+          <div class="module">
+            <h3>1/8</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+          </div>
+        </div>
+        <div class="col-1-8">
+          <div class="module">
+            <h3>1/8</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+          </div>
+        </div>
+        <div class="col-1-8">
+          <div class="module">
+            <h3>1/8</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+          </div>
+        </div>
+        <div class="col-1-8">
+          <div class="module">
+            <h3>1/8</h3>
+            <p>Pellentesque habitant morbi.</p>
+          </div>
+        </div>
+        <div class="col-1-8">
+          <div class="module">
+            <h3>1/8</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+          </div>
+        </div>
+        <div class="col-1-8">
+          <div class="module">
+            <h3>1/8</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada habitant morbi tristique senectus et netus et malesuada.</p>
+          </div>
+        </div>
+        <div class="col-1-8">
+          <div class="module">
+            <h3>1/8</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+          </div>
+        </div>
+        <div class="col-1-8">
+          <div class="module">
+            <h3>1/8</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+          </div>
+        </div>
+      </div>
+      <h2>For these columns, we've added classes to override the default widths</h2>
+      <div class="grid">
+        <div class="col-2-3 medium-col-1-2 xsmall-col-1-2">
+          <div class="module">
+            <h3>2/3</h3>
+            <p>At medium size, we've told this to be 50%.</p>
+            <p>At extra small size it would normaly default to full-width, but we've told it to be 50% at this size also.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3 medium-col-1-2 xsmall-col-1-2">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>At medium size, we've told this to be 50%.</p>
+            <p>At extra small size it would normaly default to full-width, but we've told it to be 50% at this size also.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-3 medium-col-full">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>At medium size, we've told this to be full-width.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
+          </div>
+        </div>
+        <div class="col-1-3 medium-col-1-2">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>At medium size, we've told this to be be 50%.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3 medium-col-1-2">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>At medium size, we've told this to be 50%.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-6 medium-col-1-6 small-col-1-2">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>At medium size, this would normally change to 1/3 but we've told it to stay at 1/6</p>
+            <p>At small size, we've told it to be 1/2</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6 medium-col-1-6 small-col-1-2">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>At medium size, this would normally change to 1/3 but we've told it to stay at 1/6</p>
+            <p>At small size, we've told it to be 1/2</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6 medium-col-1-6 small-col-1-4">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>At medium size, this would normally change to 1/3 but we've told it to stay at 1/6</p>
+            <p>At small size, we've told it to be 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6 medium-col-1-6 small-col-1-4">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>At medium size, this would normally change to 1/3 but we've told it to stay at 1/6</p>
+            <p>At small size, we've told it to be 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6 medium-col-1-6 small-col-1-4">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>At medium size, this would normally change to 1/3 but we've told it to stay at 1/6</p>
+            <p>At small size, we've told it to be 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-6 medium-col-1-6 small-col-1-4">
+          <div class="module">
+            <h3>1/6</h3>
+            <p>At medium size, this would normally change to 1/3 but we've told it to stay at 1/6</p>
+            <p>At small size, we've told it to be 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-4 medium-col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>At medium size, this would normally change to 1/2 but we've told it to stay at 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-4 medium-col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>At medium size, this would normally change to 1/2 but we've told it to stay at 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4 medium-col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>At medium size, this would normally change to 1/2 but we've told it to stay at 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4 medium-col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>At medium size this should be 50%.</p>
+            <p>Pellentesque habitant morbi tristique.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-1-4 medium-col-1-4 small-col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>At small size this would normally change to 1/2, but we've told it to stay at 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-2">
+          <div class="module">
+            <h3>1/2</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-4 medium-col-1-4 small-col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>At small size this would normally change to 1/2, but we've told it to stay at 1/4</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+          </div>
+        </div>
+      </div>
+      <h2>Wider gutters</h2>
+      <div class="grid grid-wide-gutter">
+        <div class="col-2-3">
+          <div class="module">
+            <h3>2/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-wide-gutter">
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-wide-gutter">
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique.</p>
+          </div>
+        </div>
+      </div>
+	  <h2>Narrow gutters</h2>
+<div class="grid grid-narrow-gutter">
+        <div class="col-2-3">
+          <div class="module">
+            <h3>2/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-narrow-gutter">
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-narrow-gutter">
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique.</p>
+          </div>
+        </div>
+      </div>
+      <h2>No gutters</h2>
+      <div class="grid grid-no-gutter">
+        <div class="col-2-3">
+          <div class="module">
+            <h3>2/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-no-gutter">
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="module">
+            <h3>1/3</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-no-gutter">
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies</p>
+          </div>
+        </div>
+        <div class="col-1-4">
+          <div class="module">
+            <h3>1/4</h3>
+            <p>Pellentesque habitant morbi tristique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+	<div id="screensize"></div>
+	
+	
+  </div>
+  <!-- /end #content --> 
+  
+</main>
+
+
+<footer id="footer">Footer goes here</footer>
+
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

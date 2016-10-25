@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grid lines</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<style>
+/**, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+html {
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+}
+body {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+p {
+	padding-bottom: 1.5rem;
+}
+p.size-small, .size-small p {
+	font-size: 14px;
+	padding-bottom: 1.5em;
+}
+p.size-large, .size-large p {
+	font-size: 20px;
+	padding-bottom: 1.5em;
+}*/
+[class^="gridlines"] {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	min-height: 100%;
+	z-index: 0;
+}
+.gridlines-24px {
+	background: url(images/gridlines-24px.png);
+}
+.gridlines-8px {
+	background: url(images/gridlines-8px.png);
+}
+.container {
+	position: relative;
+	z-index: 1;
+}
+.content {
+	padding: 1.5rem;
+	max-width: 720px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+</style>
+
+<!--<link rel="stylesheet/less" type="text/css" href="css/styles.less" />-->
+<!-- set options before less.js script -->
+<!--<script>
+  less = {
+    env: "development",
+    async: false,
+    fileAsync: false,
+    poll: 1000,
+    functions: {},
+    dumpLineNumbers: "comments",
+    relativeUrls: true,
+    rootpath: "/"
+  };
+</script>-->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>-->
+<!--<script src="js/less.min.js" type="text/javascript"></script>-->
+
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+</head>
+
+<body>
+<div class="container">
+
+    <div class="gridlines-24px">&nbsp;</div>
+    <div class="gridlines-8px">&nbsp;</div>
+    
+  <div class="content">
+    <p>These paragraphs use the default size.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a pulvinar dui. Cras laoreet neque eget sapien accumsan, ut commodo tortor dignissim. Vivamus hendrerit, felis eu accumsan euismod, metus urna ullamcorper tortor, sit amet posuere ipsum enim at justo. Ut lorem nibh, iaculis non leo et, mattis mollis tellus. Aliquam erat volutpat.</p>
+    <p>Fusce interdum, mi ac dignissim dignissim, odio risus cursus magna, quis mattis lectus nisi sed ipsum. </p>
+    <p>Donec sed egestas neque, quis imperdiet felis. Mauris augue metus, convallis in dolor in, scelerisque finibus mi. </p>
+    <p>Vestibulum ut erat semper, ultrices neque at, pulvinar tellus. </p>
+    <p>Mauris eget erat consequat, placerat tellus vel, aliquet odio. Suspendisse ac iaculis diam. Donec a aliquet dui, sed iaculis justo. Fusce vel efficitur metus, a molestie risus. </p>
+    <!--<div class="size-large">
+      <p>These paragraphs use the large size.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a pulvinar dui. Cras laoreet neque eget sapien accumsan, ut commodo tortor dignissim. Vivamus hendrerit, felis eu accumsan euismod, metus urna ullamcorper tortor, sit amet posuere ipsum enim at justo. Ut lorem nibh, iaculis non leo et, mattis mollis tellus. Aliquam erat volutpat.</p>
+      <p>Fusce interdum, mi ac dignissim dignissim, odio risus cursus magna, quis mattis lectus nisi sed ipsum. </p>
+      <p>Donec sed egestas neque, quis imperdiet felis. Mauris augue metus, convallis in dolor in, scelerisque finibus mi. </p>
+      <p>Vestibulum ut erat semper, ultrices neque at, pulvinar tellus. </p>
+      <p>Mauris eget erat consequat, placerat tellus vel, aliquet odio. Suspendisse ac iaculis diam. Donec a aliquet dui, sed iaculis justo. Fusce vel efficitur metus, a molestie risus. </p>
+    </div>
+    <div class="size-small">
+      <p>These paragraphs use the small size.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a pulvinar dui. Cras laoreet neque eget sapien accumsan, ut commodo tortor dignissim. Vivamus hendrerit, felis eu accumsan euismod, metus urna ullamcorper tortor, sit amet posuere ipsum enim at justo. Ut lorem nibh, iaculis non leo et, mattis mollis tellus. Aliquam erat volutpat.</p>
+      <p>Fusce interdum, mi ac dignissim dignissim, odio risus cursus magna, quis mattis lectus nisi sed ipsum. </p>
+      <p>Donec sed egestas neque, quis imperdiet felis. Mauris augue metus, convallis in dolor in, scelerisque finibus mi. </p>
+      <p>Vestibulum ut erat semper, ultrices neque at, pulvinar tellus. </p>
+      <p>Mauris eget erat consequat, placerat tellus vel, aliquet odio. Suspendisse ac iaculis diam. Donec a aliquet dui, sed iaculis justo. Fusce vel efficitur metus, a molestie risus. </p>
+    </div>-->
+  </div>
+</div>
+</body>
+</html>
