@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Optum-Icon-Font';
-  src:  url('fonts/Optum-Icon-Font.eot?xsq9k8');
-  src:  url('fonts/Optum-Icon-Font.eot?xsq9k8#iefix') format('embedded-opentype'),
-    url('fonts/Optum-Icon-Font.woff2?xsq9k8') format('woff2'),
-    url('fonts/Optum-Icon-Font.ttf?xsq9k8') format('truetype'),
-    url('fonts/Optum-Icon-Font.woff?xsq9k8') format('woff'),
-    url('fonts/Optum-Icon-Font.svg?xsq9k8#Optum-Icon-Font') format('svg');
+  src:  url('fonts/Optum-Icon-Font.eot?bk1r8t');
+  src:  url('fonts/Optum-Icon-Font.eot?bk1r8t#iefix') format('embedded-opentype'),
+    url('fonts/Optum-Icon-Font.woff2?bk1r8t') format('woff2'),
+    url('fonts/Optum-Icon-Font.ttf?bk1r8t') format('truetype'),
+    url('fonts/Optum-Icon-Font.woff?bk1r8t') format('woff'),
+    url('fonts/Optum-Icon-Font.svg?bk1r8t#Optum-Icon-Font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -52,7 +52,7 @@
 .cux-icon-folder_closed:before {
   content: "\e908";
 }
-.cux-icon-open:before {
+.cux-icon-folder_open:before {
   content: "\e909";
 }
 .cux-icon-settings:before {
@@ -67,7 +67,7 @@
 .cux-icon-calendar:before {
   content: "\e90d";
 }
-.cux-icon-delete:before {
+.cux-icon-delete_trash:before {
   content: "\e90e";
 }
 .cux-icon-trash_full:before {
@@ -130,19 +130,19 @@
 .cux-icon-award:before {
   content: "\e922";
 }
-.cux-icon-rating_empty:before {
+.cux-icon-rating_hollow:before {
   content: "\e923";
 }
-.cux-icon-rating_fill:before {
+.cux-icon-rating_filled:before {
   content: "\e924";
 }
-.cux-icon-favorite_empty:before {
+.cux-icon-favorite_hollow:before {
   content: "\e925";
 }
 .cux-icon-favorite_filled:before {
   content: "\e926";
 }
-.cux-icon-information:before {
+.cux-icon-info:before {
   content: "\e927";
 }
 .cux-icon-help:before {
@@ -154,10 +154,10 @@
 .cux-icon-warning:before {
   content: "\e92a";
 }
-.cux-icon-prohibited:before {
+.cux-icon-prohibited_slash:before {
   content: "\e92c";
 }
-.cux-icon-prohibited2:before {
+.cux-icon-prohibited_x:before {
   content: "\e92d";
 }
 .cux-icon-checkmark_action:before {
@@ -292,10 +292,10 @@
 .cux-icon-ellipsis:before {
   content: "\e959";
 }
-.cux-icon-book1:before {
+.cux-icon-guidelines:before {
   content: "\e92b";
 }
-.cux-icon-list_1:before {
+.cux-icon-list:before {
   content: "\e95b";
 }
 .cux-icon-menu:before {
@@ -319,7 +319,7 @@
 .cux-icon-power:before {
   content: "\e962";
 }
-.cux-icon-screen_full:before {
+.cux-icon-screen_maximize:before {
   content: "\e963";
 }
 .cux-icon-screen_minimize:before {
@@ -328,7 +328,7 @@
 .cux-icon-expand:before {
   content: "\e965";
 }
-.cux-icon-reduce:before {
+.cux-icon-contract:before {
   content: "\e966";
 }
 .cux-icon-new-window:before {
@@ -340,7 +340,7 @@
 .cux-icon-close:before {
   content: "\e969";
 }
-.cux-icon-add2:before {
+.cux-icon-add:before {
   content: "\e96a";
 }
 .cux-icon-subtract:before {
@@ -349,7 +349,7 @@
 .cux-icon-view:before {
   content: "\e96c";
 }
-.cux-icon-view_no:before {
+.cux-icon-view_hide:before {
   content: "\e96d";
 }
 .cux-icon-search:before {
@@ -367,10 +367,7 @@
 .cux-icon-medication:before {
   content: "\e972";
 }
-.cux-icon-clinicaloverview:before {
-  content: "\e985";
-}
-.cux-icon-encounters:before {
+.cux-icon-clinical-overview:before {
   content: "\e973";
 }
 .cux-icon-accessible:before {
@@ -400,7 +397,7 @@
 .cux-icon-vitals:before {
   content: "\e97c";
 }
-.cux-icon-hazardous-materials:before {
+.cux-icon-hazardous_material:before {
   content: "\e97d";
 }
 .cux-icon-new:before {
@@ -412,7 +409,7 @@
 .cux-icon-xls:before {
   content: "\e980";
 }
-.cux-icon-global-medical:before {
+.cux-icon-global_medical:before {
   content: "\e981";
 }
 .cux-icon-response_4:before {
@@ -481,16 +478,28 @@
 .cux-icon-alert2:before {
   content: "\e98c";
 }
-.cux-icon-checkmark2:before {
+.cux-icon-checkmark_filled:before {
   content: "\e994";
 }
-.cux-icon-help2:before {
+.cux-icon-help_filled:before {
   content: "\e999";
 }
-.cux-icon-info:before {
+.cux-icon-info_filled:before {
   content: "\e99a";
 }
 .cux-icon-warning2:before {
   content: "\e99b";
+}
+.cux-icon-caret-up:before {
+  content: "\e985";
+}
+.cux-icon-caret-down:before {
+  content: "\e99c";
+}
+.cux-icon-caret-left:before {
+  content: "\e99d";
+}
+.cux-icon-caret-right:before {
+  content: "\e99e";
 }
 
