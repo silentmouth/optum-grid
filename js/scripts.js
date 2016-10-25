@@ -9,13 +9,14 @@ $(document).ready(function(){
 	
 	function getWidth() {
 		var w = $(window).width();
-		console.log('viewport width = ' + w);
+		// console.log('viewport width = ' + w);
 		if (w >= 768 && w < 1024) {
 			$screensize.text('medium size (768 to 1024)');
 		} else if (w >= 600 && w < 768) {
 			$screensize.text('small size (600 to 768)');
 		} else if (w < 600) {
 			$screensize.text('extra small size (< 600)');
+			xsmall = true;
 		} else {
 			$screensize.text('desktop size (1024 or larger)');
 		}
@@ -91,11 +92,31 @@ $(document).ready(function(){
 	}
 	
 	$(window).load(function() {
-	  equalheight($panelContentColumns);
+		  equalheight($panelContentColumns);
 	});
 	
 	$(window).resize(function(){
 	  equalheight($panelContentColumns);
+	});
+	
+	
+	
+	// collapsible panels
+	$('.panel-toggle').click(function() {
+		$panelHeader = $(this).closest('.panel-header');
+		$panel = $panelHeader.next('.panel-body');
+		$arrow = $panelHeader.find('[class^="cux-icon"]');
+		if ( $panel.is('.open') ) {
+			$panel.slideUp().removeClass('open');
+			$arrow.removeClass('cux-icon-caret_down').addClass('cux-icon-caret_right');
+		} else {
+			$panel.slideDown().addClass('open');
+			$arrow.removeClass('cux-icon-caret_right').addClass('cux-icon-caret_down');
+		}
+	});
+	
+	$('#mobile-nav > a').click(function() {
+		$(this).next('.nav-secondary').slideToggle('fast');
 	});
 
 });
