@@ -1867,18 +1867,18 @@ html.compact .size-xsmall p {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-  .form-field,
-  button,
-  .button,
-  input[type="button"],
-  input[type="submit"],
-  .button-link {
-    height: 3rem;
-  }
+  /*.form-field,
+  	button,
+  	.button,
+  	input[type="button"],
+  	input[type="submit"],
+  	.button-link {
+  		height: @unit-6;
+  	}*/
   .button.button-large,
   .button.button-large:hover,
   .button.button-large:focus {
-    height: 4rem;
+    height: 3rem;
     width: 100%;
   }
   .panel-body .module {
