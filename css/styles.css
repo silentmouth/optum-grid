@@ -1804,9 +1804,7 @@ html.compact .size-xsmall p {
 }
 /* extra small screen (mobile - 600px or smaller) */
 @media (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
+  /*html { font-size: 14px; }*/
   #logo {
     margin: 0;
     max-width: 100%;
